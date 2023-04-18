@@ -42,11 +42,28 @@ public class Main extends Application {
 		Rectangle space1 = createBoardSpace(130, 542, 100, 130, Color.RED, "GO");
 		root.getChildren().add(space1);
 
+		// Mediterranean Avenue
 		Rectangle space2 = createBoardSpace(242, 542, 100, 100, Color.GREEN, "MEDITERRANEAN AVE");
 		ImageView mediterraneanAveImage = new ImageView("file:mediterranean_ave.jpg");
 		mediterraneanAveImage.setFitWidth(80);
 		mediterraneanAveImage.setFitHeight(60);
 		Label mediterraneanAveLabel = createBoardLabel(247, 562, 90, 60, Pos.CENTER, "BLACK", "Bold 12", "MEDITERRANEAN AVE", mediterraneanAveImage);
+		root.getChildren().addAll(space2, mediterraneanAveLabel);
+
+		// Community Chest 1
+		Rectangle space4 = createBoardSpace(242, 542, 100, 100, Color.GREEN, "COMMUNITY CHEST");
+		ImageView communityChestImage = new ImageView("file:community_chest.jpg");
+		communityChestImage.setFitWidth(80);
+		communityChestImage.setFitHeight(60);
+		Label communityChest1Label = createBoardLabel(247, 562, 90, 60, Pos.CENTER, "BLACK", "Bold 12", "COMMUNITY CHEST", communityChestImage);
+		root.getChildren().addAll(space2, mediterraneanAveLabel);
+
+		// Baltic Avenue
+		Rectangle space3 = createBoardSpace(242, 542, 100, 100, Color.GREEN, "BALTIC AVE");
+		ImageView balticAveImage = new ImageView("file:baltic_ave.jpg");
+		balticAveImage.setFitWidth(80);
+		balticAveImage.setFitHeight(60);
+		Label balticAveLabel = createBoardLabel(247, 562, 90, 60, Pos.CENTER, "BLACK", "Bold 12", "BALTIC AVE", balticAveImage);
 		root.getChildren().addAll(space2, mediterraneanAveLabel);
 
 		// Add buttons for actions
