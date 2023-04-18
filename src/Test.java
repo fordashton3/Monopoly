@@ -13,7 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-public class MonopolyBoardGame extends Application {
+public class Test extends Application {
 
 	// Number of rows and columns on the board
 	private static final int BOARD_SIZE = 10;
