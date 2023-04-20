@@ -9,8 +9,8 @@ public class Property extends Space {
 	private boolean owned;
 
 
-	public Property(int spaceNumber, int price, int rent, Color color, int mortgage) {
-		super(spaceNumber);
+	public Property(String name, int spaceNumber, int price, int rent, Color color, int mortgage) {
+		super(name, spaceNumber);
 		this.price = price;
 		this.rent = rent;
 		this.color = color;

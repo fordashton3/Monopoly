@@ -1,8 +1,8 @@
 public class Tax extends Space{
 	private final int tax;
 
-	public Tax(int space, int tax) {
-		super(space);
+	public Tax(String name, int space, int tax) {
+		super(name, space);
 		this.tax = tax;
 	}
 
