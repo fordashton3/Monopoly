@@ -2,12 +2,12 @@
 ________________
 
 
-Spaces(Space Abstract):
+Spaces(Objects.Space Abstract):
 * Name
 * type
 
 
-(Abstract)Property extends space
+(Abstract)Objects.Property extends space
 * value/cost
 * Owner
 
@@ -52,12 +52,12 @@ SpaceHandler
 * If a player has no money, they must be able to mortgage the property for cash. If they cannot mortgage a property and they have no money but must pay something then their balance is -1, which is effectively bankrupt. Bankrupt players reduce the player count by player count - 1. At the beginning of every turn, the player count should be checked to be above 1 as if it is one, then the game ends, the “statistics or winner” is recorded, their win counter is added too (default = 0), and the turns it took to complete the game is calculated aka the turn counter is saved with respect to the winner's stats.
 
 
-Property Event Handler
+Objects.Property Event Handler
 * Handles the property details defined in spaceHandler
 
 
-Card Event Handler
-* Handles the card details defined in spaceHandler and get’s the next available card of the matching card type from the appropriate ArrayList of that CardType. If the ArrayList is empty, the player gets no card. (or we re-run the randomized roll (aka sort method: we define at least five sort methods, or I have an idea for a possible randomizer.
+Objects.Card Event Handler
+* Handles the card details defined in spaceHandler and get’s the next available card of the matching card type from the appropriate ArrayList of that Objects.CardType. If the ArrayList is empty, the player gets no card. (or we re-run the randomized roll (aka sort method: we define at least five sort methods, or I have an idea for a possible randomizer.
 * Depending on the card type of it is a “Get out of Jail free card” then store that in a player jailCards counter and subtract when they go to jail and a turn has passed.
 
 

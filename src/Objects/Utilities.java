@@ -1,3 +1,5 @@
+package Objects;
+
 import java.awt.*;
 
 public class Utilities extends Property{

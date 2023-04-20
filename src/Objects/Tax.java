@@ -1,3 +1,5 @@
+package Objects;
+
 public class Tax extends Space{
 	private final int tax;
 

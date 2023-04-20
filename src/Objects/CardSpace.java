@@ -1,3 +1,5 @@
+package Objects;
+
 public class CardSpace extends Space{
 private final CardType type;
 	protected CardSpace(String name, int spaceNum, CardType cardType) {
