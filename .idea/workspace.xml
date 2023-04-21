@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c29c19a2-90b8-4d54-9cc3-aa241e266fb6" name="Changes" comment="In the process of adding objects for the different types of spaces you can land on" />
+    <list default="true" id="c29c19a2-90b8-4d54-9cc3-aa241e266fb6" name="Changes" comment="Compressed all  objects into a single package">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +20,9 @@
         <option value="Enum" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,6 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Ashton/Documents/Java/javafx-sdk-20/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -44,7 +51,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -69,7 +76,8 @@
       <workItem from="1680731593810" duration="3853000" />
       <workItem from="1681484989883" duration="1694000" />
       <workItem from="1681842415631" duration="7662000" />
-      <workItem from="1681951124331" duration="8185000" />
+      <workItem from="1681951124331" duration="8977000" />
+      <workItem from="1681996194953" duration="4900000" />
     </task>
     <task id="LOCAL-00001" summary="Square One">
       <created>1680731967956</created>
@@ -162,7 +170,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681962796592</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Compressed all  objects into a single package">
+      <created>1681963076979</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681963076979</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Compressed all  objects into a single package">
+      <created>1681963139380</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681963139380</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Compressed all  objects into a single package">
+      <created>1681963225945</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681963225945</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +203,6 @@
         <entry key="3144d4d5-9448-4b85-83f6-0e0bd44e1501">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -193,6 +221,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
@@ -210,6 +239,7 @@
     <MESSAGE value="Sample Code" />
     <MESSAGE value="Added alternate main method named Test" />
     <MESSAGE value="In the process of adding objects for the different types of spaces you can land on" />
-    <option name="LAST_COMMIT_MESSAGE" value="In the process of adding objects for the different types of spaces you can land on" />
+    <MESSAGE value="Compressed all  objects into a single package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compressed all  objects into a single package" />
   </component>
 </project>
