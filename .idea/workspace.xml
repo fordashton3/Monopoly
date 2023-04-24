@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c29c19a2-90b8-4d54-9cc3-aa241e266fb6" name="Changes" comment="Compressed all  objects into a single package">
+    <list default="true" id="c29c19a2-90b8-4d54-9cc3-aa241e266fb6" name="Changes" comment="Put image folder into src">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/chance.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/chance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/community_chest.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/community_chest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/electric_company.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/electric_company.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/free_parking.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/free_parking.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/go.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/go.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/go_to_jail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/go_to_jail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/jail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/jail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/luxury_tax.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/luxury_tax.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/monopoly_board.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/monopoly_board.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/railroad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/railroad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/water_works.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/water_works.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +55,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ashton\Documents\Projects\Monopoly\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -88,7 +82,7 @@
       <workItem from="1681484989883" duration="1694000" />
       <workItem from="1681842415631" duration="7662000" />
       <workItem from="1681951124331" duration="8977000" />
-      <workItem from="1681996194953" duration="7773000" />
+      <workItem from="1681996194953" duration="8099000" />
     </task>
     <task id="LOCAL-00001" summary="Square One">
       <created>1680731967956</created>
@@ -209,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682039111885</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Put image folder into src">
+      <created>1682372820584</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682372820584</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +259,7 @@
     <MESSAGE value="Added alternate main method named Test" />
     <MESSAGE value="In the process of adding objects for the different types of spaces you can land on" />
     <MESSAGE value="Compressed all  objects into a single package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compressed all  objects into a single package" />
+    <MESSAGE value="Put image folder into src" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put image folder into src" />
   </component>
 </project>

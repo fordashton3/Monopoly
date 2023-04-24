@@ -132,13 +132,17 @@ public class Main extends Application {
 	}
 
 	// Creates an ImageView with the specified image path
-	private ImageView createImageView(String imagePath) {
-		Image image = new Image(imagePath);
+	public static ImageView createImageView(String imageUrl) {
+		Image image = new Image(imageUrl);
 		ImageView imageView = new ImageView(image);
-		imageView.setFitWidth(CELL_SIZE);
-		imageView.setFitHeight(CELL_SIZE);
+		imageView.setPreserveRatio(true);
+		imageView.setFitWidth(CELL_SIZE / 2);
+		imageView.setFitHeight(CELL_SIZE / 2);
+		imageView.setLayoutX((CELL_SIZE - imageView.getBoundsInLocal().getWidth()) / 2);
+		imageView.setLayoutY((CELL_SIZE - imageView.getBoundsInLocal().getHeight()) / 2);
 		return imageView;
 	}
+
 
 
 	// Creates the player's position label

@@ -1,0 +1,87 @@
+﻿Monopoly
+________________
+
+
+Spaces(Objects.Space Abstract):
+* Name
+* type
+
+
+(Abstract)Objects.Property extends space
+* value/cost
+* Owner
+
+
+(Abstract)Corners extends space
+* value/cost
+
+
+(Abstract)Cards extends space
+* cardType
+
+
+________________
+
+
+Functions:
+
+
+* Create an OnEventHandler for that activates the correct function depending on the variable.
+* Boolean: players turn
+* GlobalTurnCounter?
+
+
+MoveHandler
+* Show dice
+* Roll Dice
+* Return int diceRoll to move a player
+* Move the player [diceRoll] amount of spaces
+* If the player rolls doubles, re-run the MoveHandler after SpaceHandler is run and implement a ++counter for a maximum of three doubles before the player is automatically sent to Jail in the available coordinate.
+* Also, in the event of a move, if a player exists in that space, handle taking the next available spot in that location.
+A player moves [diceRoll] amount of spaces, and based on this number, a counter from the player's position number (ex: 0 at GO) moves then [diceRoll] distance from GO. Each space has 4 spots (coordinateDefined), so the player object’s location value is now these new coordinates. The board is static, so coordinates do not change.
+
+
+SpaceHandler
+* Provide info about the appropriate space, and give the option to buy or auction if ex:[space.getInfo.open] is true in a propertyEventHandler if ex:[space.getType] = card or the such, then run the cardEventHandler also if type is corner than run cornerEventHandler
+* If ex:[space.getInfo.open] is false, then get the player who owns the property, subtract the balance from a player with ex:[myTurn] = true
+* Handle if the player does not have enough money for the space
+* Run end turn
+* In the event of an auction run, the auctionHandler
+* After the [property] is now out of [propertiesList] and in a player’s [myProperites], process the postTurnHandler (Trading, Houses / Hotels if possible, [something else I can’t think that’s in the game]
+* If a player exists in the jail (have an ex: “day’s in jail counter”) and it’s their turn appropriately run the jailHandler, which should depend on the daysInJail counter as the player will have the option to roll the dice for doubles there first three times when it’s there turn (one time each turn) to get out, pay 50 to get out of jail, or even use their get out for free card.
+* If a player has no money, they must be able to mortgage the property for cash. If they cannot mortgage a property and they have no money but must pay something then their balance is -1, which is effectively bankrupt. Bankrupt players reduce the player count by player count - 1. At the beginning of every turn, the player count should be checked to be above 1 as if it is one, then the game ends, the “statistics or winner” is recorded, their win counter is added too (default = 0), and the turns it took to complete the game is calculated aka the turn counter is saved with respect to the winner's stats.
+
+
+Objects.Property Event Handler
+* Handles the property details defined in spaceHandler
+
+
+Objects.Card Event Handler
+* Handles the card details defined in spaceHandler and get’s the next available card of the matching card type from the appropriate ArrayList of that Objects.CardType. If the ArrayList is empty, the player gets no card. (or we re-run the randomized roll (aka sort method: we define at least five sort methods, or I have an idea for a possible randomizer.
+* Depending on the card type of it is a “Get out of Jail free card” then store that in a player jailCards counter and subtract when they go to jail and a turn has passed.
+
+
+
+
+________________
+
+
+
+
+Logical Run:
+
+
+Menu Screen which displays: (with artwork in the back, the title of the game, and version # bottom right, creators bottom left)
+* Play
+* Settings?
+* Statistics
+* Quit
+From menu the player can:
+* Menu.quit > quits the game
+* Menu.statistics > opens a screen that displays a leaderboard of winners, amount of wins per winner, rank in accordance to the other winners, total games played top left, back button top right or bottom right) Could provide a search function but worry about it afterwards
+* Menu.settings > opens settings to manage…..?
+* Menu.play > run prompt for the player name, then proceed to a player management screen where pieces can be changed as long as another player does not have the piece
+   * Allow for adding up to (can scale), but I’d suggest 3 others besides the “hosting” player. When ready, and there is at least one more player, show a button to ex:“Play the Game” (on play the game show loading screen?) and randomize the card decks and prompt the players to roll the dice (starting with the host)
+   * The players are then ordered by highest dice roll to the lowest max =12 min =2
+   * Then run the game as in order until the player count is 1
+   * At a player count of one, the game is saved, writing to the files for stats, etc. and the in-game players are cleared. The “host” is returned to the menu. From there, the host can access everything on the menu; the stats counter should be updated anytime the host views it as it’s just gonna read a file and if the host chose to start a new game, then their name should be saved unless the game was quit in which case the prompt screen will display again. If their name is still saved as a local variable though then only the other players pieces / names will have to be created / set again.
