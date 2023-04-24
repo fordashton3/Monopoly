@@ -81,40 +81,29 @@ public class Main extends Application {
 				// Add image to specific cells
 				ImageView imageView = null;
 				if (y == 0 && x == 0) {
-					imageView = createImageView(FREE_PARKING_IMAGE_PATH);
-				}
-				else if (y == 0 && x == BOARD_SIZE - 1) {
-					imageView = createImageView(GO_TO_JAIL_IMAGE_PATH);
-				}
-				else if (y == BOARD_SIZE - 1 && x == 0) {
-					imageView = createImageView(JAIL_IMAGE_PATH);
-				}
-				else if (y == BOARD_SIZE - 1 && x == BOARD_SIZE - 1) {
-					imageView = createImageView(GO_IMAGE_PATH);
-				}
-				else if (y == 3 && x == 0 || y == BOARD_SIZE - 1 && x == 8 || y == 3 && x == BOARD_SIZE - 1) {
-					imageView = createImageView(COMMUNITY_CHEST_IMAGE_PATH);
-				}
-				else if (y == 6 && x == BOARD_SIZE - 1 || y == 0 && x == 2 || y == BOARD_SIZE - 1 && x == 3) {
-					imageView = createImageView(CHANCE_IMAGE_PATH);
-				}
-				else if (y == 5 && (x == 0 || x == BOARD_SIZE - 1)) {
-					imageView = createImageView(RAILROAD_IMAGE_PATH);
-				}
-				else if ((y == 0 || y == BOARD_SIZE - 1) && x == 5) {
-					imageView = createImageView(RAILROAD_IMAGE_PATH);
-				}
-				else if (y == 0 && x == 8) {
-					imageView = createImageView(WATER_IMAGE_PATH);
-				}
-				else if (y == 8 && x == 0) {
-					imageView = createImageView(ELECTRIC_IMAGE_PATH);
-				}
-				else if (y == BOARD_SIZE - 1 && x == 6){
-					imageView = createImageView(INCOME_TAX);
-				}
-				else if (y == 8 && x == BOARD_SIZE - 1){
-					imageView = createImageView(LUXURY_TAX);
+					imageView = createImageView(FREE_PARKING_IMAGE_PATH, true);
+				} else if (y == 0 && x == BOARD_SIZE - 1) {
+					imageView = createImageView(GO_TO_JAIL_IMAGE_PATH, true);
+				} else if (y == BOARD_SIZE - 1 && x == 0) {
+					imageView = createImageView(JAIL_IMAGE_PATH, true);
+				} else if (y == BOARD_SIZE - 1 && x == BOARD_SIZE - 1) {
+					imageView = createImageView(GO_IMAGE_PATH, true);
+				} else if (y == 3 && x == 0 || y == BOARD_SIZE - 1 && x == 8 || y == 3 && x == BOARD_SIZE - 1) {
+					imageView = createImageView(COMMUNITY_CHEST_IMAGE_PATH, false);
+				} else if (y == 6 && x == BOARD_SIZE - 1 || y == 0 && x == 2 || y == BOARD_SIZE - 1 && x == 3) {
+					imageView = createImageView(CHANCE_IMAGE_PATH, false);
+				} else if (y == 5 && (x == 0 || x == BOARD_SIZE - 1)) {
+					imageView = createImageView(RAILROAD_IMAGE_PATH, false);
+				} else if ((y == 0 || y == BOARD_SIZE - 1) && x == 5) {
+					imageView = createImageView(RAILROAD_IMAGE_PATH, false);
+				} else if (y == 0 && x == 8) {
+					imageView = createImageView(WATER_IMAGE_PATH, false);
+				} else if (y == 8 && x == 0) {
+					imageView = createImageView(ELECTRIC_IMAGE_PATH, false);
+				} else if (y == BOARD_SIZE - 1 && x == 6) {
+					imageView = createImageView(INCOME_TAX, false);
+				} else if (y == 8 && x == BOARD_SIZE - 1) {
+					imageView = createImageView(LUXURY_TAX, false);
 				}
 
 
@@ -132,17 +121,24 @@ public class Main extends Application {
 	}
 
 	// Creates an ImageView with the specified image path
-	public static ImageView createImageView(String imageUrl) {
-		Image image = new Image(imageUrl);
-		ImageView imageView = new ImageView(image);
-		imageView.setPreserveRatio(true);
-		imageView.setFitWidth(CELL_SIZE / 2.0);
-		imageView.setFitHeight(CELL_SIZE / 2.0);
-		imageView.setLayoutX((CELL_SIZE - imageView.getBoundsInLocal().getWidth()) / 2);
-		imageView.setLayoutY((CELL_SIZE - imageView.getBoundsInLocal().getHeight()) / 2);
-		return imageView;
+	public static ImageView createImageView(String imagePath, boolean isCorner) {
+		if (isCorner) {
+			Image image = new Image(imagePath);
+			ImageView imageView = new ImageView(image);
+			imageView.setFitWidth(CELL_SIZE);
+			imageView.setFitHeight(CELL_SIZE);
+			return imageView;
+		} else {
+			Image image = new Image(imagePath);
+			ImageView imageView = new ImageView(image);
+			imageView.setPreserveRatio(true);
+			imageView.setFitWidth(CELL_SIZE / 2.0);
+			imageView.setFitHeight(CELL_SIZE / 2.0);
+			imageView.setLayoutX((CELL_SIZE - imageView.getBoundsInLocal().getWidth()) / 2);
+			imageView.setLayoutY((CELL_SIZE - imageView.getBoundsInLocal().getHeight()) / 2);
+			return imageView;
+		}
 	}
-
 
 
 	// Creates the player's position label

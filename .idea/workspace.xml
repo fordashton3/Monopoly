@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c29c19a2-90b8-4d54-9cc3-aa241e266fb6" name="Changes" comment="Put image folder into src">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <workItem from="1681484989883" duration="1694000" />
       <workItem from="1681842415631" duration="7662000" />
       <workItem from="1681951124331" duration="8977000" />
-      <workItem from="1681996194953" duration="8099000" />
+      <workItem from="1681996194953" duration="8445000" />
     </task>
     <task id="LOCAL-00001" summary="Square One">
       <created>1680731967956</created>
@@ -210,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682372820584</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Put image folder into src">
+      <created>1682373113620</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682373113620</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Put image folder into src">
+      <created>1682373142440</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1682373142440</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
