@@ -17,24 +17,24 @@ import Objects.*;
 public class Main extends Application {
 
 	// Number of rows and columns on the board
-	private static final int BOARD_SIZE = 10;
+	private static final int BOARD_SIZE = 11;
 	// Size of each cell on the board
 	private static final int CELL_SIZE = 60;
 	// Player's current position on the board
 	private final IntegerProperty playerPosition = new SimpleIntegerProperty(0);
 
 	// Image paths
-	private static final String GO_IMAGE_PATH = "images//go.png";
-	private static final String JAIL_IMAGE_PATH = "images//jail.png";
-	private static final String FREE_PARKING_IMAGE_PATH = "images//free_parking.png";
-	private static final String GO_TO_JAIL_IMAGE_PATH = "images//go_to_jail.png";
-	private static final String COMMUNITY_CHEST_IMAGE_PATH = "images//community_chest.png";
-	private static final String CHANCE_IMAGE_PATH = "images//chance.png";
-	private static final String RAILROAD_IMAGE_PATH = "images//railroad.png";
-	private static final String WATER_IMAGE_PATH = "images//water_works.png";
-	private static final String ELECTRIC_IMAGE_PATH = "images//electric_company.png";
-	private static final String INCOME_TAX = "images//income_tax.png";
-	private static final String LUXURY_TAX = "images//luxury_tax.png";
+	private static final String GO_IMAGE_PATH = "images\\go.png";
+	private static final String JAIL_IMAGE_PATH = "images\\jail.png";
+	private static final String FREE_PARKING_IMAGE_PATH = "images\\free_parking.png";
+	private static final String GO_TO_JAIL_IMAGE_PATH = "images\\go_to_jail.png";
+	private static final String COMMUNITY_CHEST_IMAGE_PATH = "images\\community_chest.png";
+	private static final String CHANCE_IMAGE_PATH = "images\\chance.png";
+	private static final String RAILROAD_IMAGE_PATH = "images\\railroad.png";
+	private static final String WATER_IMAGE_PATH = "images\\water_works.png";
+	private static final String ELECTRIC_IMAGE_PATH = "images\\electric_company.png";
+	private static final String INCOME_TAX = "images\\luxury_tax.png";
+	private static final String LUXURY_TAX = "images\\luxury_tax.png";
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -74,12 +74,8 @@ public class Main extends Application {
 				cell.setStroke(Color.BLACK);
 
 				// Add text to cell
-				String text = "Cell " + (y * BOARD_SIZE + x + 1);
-				Label label = new Label(text);
-				label.setWrapText(true);
-				label.setMaxWidth(CELL_SIZE);
-				label.setAlignment(Pos.CENTER);
-				VBox cellContents = new VBox(cell, label);
+
+				VBox cellContents = new VBox(cell);
 				cellContents.setAlignment(Pos.CENTER);
 
 				// Add image to specific cells
@@ -102,22 +98,22 @@ public class Main extends Application {
 				else if (y == 6 && x == BOARD_SIZE - 1 || y == 0 && x == 2 || y == BOARD_SIZE - 1 && x == 3) {
 					imageView = createImageView(CHANCE_IMAGE_PATH);
 				}
-				else if (y == 2 && x == 0) {
+				else if (y == 5 && (x == 0 || x == BOARD_SIZE - 1)) {
 					imageView = createImageView(RAILROAD_IMAGE_PATH);
 				}
-				else if (y == 2 && x == 9) {
+				else if ((y == 0 || y == BOARD_SIZE - 1) && x == 5) {
 					imageView = createImageView(RAILROAD_IMAGE_PATH);
 				}
-				else if (y == 7 && x == 0) {
+				else if (y == 0 && x == 8) {
 					imageView = createImageView(WATER_IMAGE_PATH);
 				}
-				else if (y == 7 && x == 9) {
+				else if (y == 8 && x == 0) {
 					imageView = createImageView(ELECTRIC_IMAGE_PATH);
 				}
 				else if (y == BOARD_SIZE - 1 && x == 6){
 					imageView = createImageView(INCOME_TAX);
 				}
-				else if (y ==  5&& x == BOARD_SIZE - 1){
+				else if (y == 8 && x == BOARD_SIZE - 1){
 					imageView = createImageView(LUXURY_TAX);
 				}
 
@@ -139,10 +135,11 @@ public class Main extends Application {
 	private ImageView createImageView(String imagePath) {
 		Image image = new Image(imagePath);
 		ImageView imageView = new ImageView(image);
-		imageView.setFitHeight(CELL_SIZE * 0.6);
-		imageView.setFitWidth(CELL_SIZE * 0.6);
+		imageView.setFitWidth(CELL_SIZE);
+		imageView.setFitHeight(CELL_SIZE);
 		return imageView;
 	}
+
 
 	// Creates the player's position label
 	private Label createPositionLabel() {
