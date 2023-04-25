@@ -19,7 +19,7 @@ public class Main extends Application {
 	// Number of rows and columns on the board
 	private static final int BOARD_SIZE = 11;
 	// Size of each cell on the board
-	private static final int CELL_SIZE = 60;
+	private static final int CELL_SIZE = 80;
 	// Player's current position on the board
 	private final IntegerProperty playerPosition = new SimpleIntegerProperty(0);
 
